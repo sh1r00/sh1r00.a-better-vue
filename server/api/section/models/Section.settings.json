@@ -1,0 +1,31 @@
+{
+  "connection": "default",
+  "collectionName": "section",
+  "info": {
+    "name": "section",
+    "description": ""
+  },
+  "options": {
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "default": "",
+      "type": "string"
+    },
+    "description": {
+      "default": "",
+      "type": "text"
+    },
+    "image": {
+      "model": "file",
+      "via": "related",
+      "plugin": "upload",
+      "required": false
+    },
+    "items": {
+      "collection": "item",
+      "via": "section"
+    }
+  }
+}
