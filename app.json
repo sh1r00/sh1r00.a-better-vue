@@ -1,0 +1,25 @@
+{
+  "name": "sh1r00.a-better-vue",
+  "description": "heroku-github-netlify",
+  "scripts": {
+    "postdeploy": "server/index.js"
+  },
+  "env": {
+    "MONGODB_URI": {
+      "required": true
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "addons": [
+    "mongolab"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/nodejs"
+    }
+  ]
+}
